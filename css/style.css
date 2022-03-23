@@ -1,0 +1,243 @@
+html, body, #home, #container{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    position: relative;
+}
+
+/*Container/Bg format
+_________________________________*/
+#bg-color{
+    background: linear-gradient(50deg,#7c26f8 ,#ff4169);
+    border-radius: 100%;
+    animation: bgc 10s linear infinite;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    
+    width: 2000px;
+    height: 2000px;
+
+    z-index: -1;
+}
+
+#container{
+    background: url(../imagens/capa.png), url(../imagens/ruido.png);
+    font-family: Helvetica, Arial, sans-serif;
+    background-attachment: fixed;
+}
+/*Animations
+_________________________________*/
+@keyframes bgc {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+/*Barra nav format
+_________________________________*/
+.navbar-light button.navbar-toggler{
+    color: rgba(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.divisor{
+    width: 1px;
+    margin: 12px 15px;
+    background: white;
+}
+
+/*Navbar link format
+_________________________________*/
+#navMenu a{
+    color: white;
+}
+
+#navMenu a:hover{
+    color: #9bf0e1;
+}
+
+/*Capa format
+_________________________________*/
+.capa{
+    text-align: center;
+}
+
+/*Botoes Capa
+_________________________________*/
+a.free-btn, a.premium-btn{
+    color: white;
+    padding: 10px 20px;
+    border-radius: 500px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+a.free-btn{
+    background-color: #7c26f8;
+}
+a.free-btn:hover{
+    background-color: #5c08d1;
+    color: white;
+}
+a.premium-btn{
+    border: 2px solid white;
+}
+a.premium-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+a.carousel-control-prev, a.carousel-control-next{
+    text-decoration: none;
+    padding: 15px;
+    width: 5%;
+}
+
+/*Conteudo format
+_________________________________*/
+.box{
+    padding: 20px 0;
+}
+#services{
+    background: white;
+}
+#recursos{
+    color: white;
+}
+#services h2, #services h3{
+    color: #7c25f8;
+}
+
+#services .row-photo{
+    padding: 10px 0;
+}
+
+#services .row-photo img{
+    padding-bottom: 5px;
+}
+
+#recursos h2{
+    color: #fff;
+}
+
+#recursos h3{
+    color: #9df0c1;
+}
+
+.rotation{
+    transform: rotate(30deg);
+    padding-left: 80px;
+}
+
+footer{
+    background: black;
+    padding: 50px 0 20px 0;
+    position: relative;
+}
+
+footer img{
+    opacity: 0.5;
+}
+
+footer h4{
+    color: #919496;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+footer .navbar-nav a{
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+footer .navbar-nav a:hover{
+    color: #9bf0e1;
+}
+
+/*Tipografia
+_________________________________*/
+p{
+    font-size: 1em;
+    font-weight: 600;
+    text-indent: 15px;
+}
+.customh1{
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 50px;
+    color: white;
+}
+.customh2{
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: -0.04em;
+}
+.customh3{
+    
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: -0.04em;
+}
+
+/*Media Queries
+_________________________________*/
+/* Extra-Small devices*/
+@media (max-width: 575.98px) { 
+    /*background position*/
+    .customh1{ font-size: 3em;}
+    .customh2{ font-size: 2.5em;}
+    #free-btn, #premium-btn{
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        width: fit-content;
+    }
+}
+
+/* Small devices*/
+@media (min-width: 576px) { 
+    .customh1{ font-size: 3.8em;}
+    #free-btn, #premium-btn{
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        width: fit-content;
+    }
+}
+
+/* Medium devices*/
+@media (min-width: 768px) {
+    .customh1{ font-size: 4em;}
+    .customh2{ font-size: 2.2em;}
+    #free-btn, #premium-btn{
+        margin: 0 10px;
+    }
+}
+
+/* Large devices*/
+@media (min-width: 992px) {
+    #bg-color{
+        top: -100%;
+        width: 3000px;
+        height: 3000px;
+    }
+    .customh1{ font-size: 6em;}
+}
+
+/* X-Large devices*/
+@media (min-width: 1200px) { 
+    .customh1{ font-size: 8em;}
+}
+
+/* XX-Large devices*/
+@media (min-width: 1400px) { 
+    #bg-color{
+        top: -100%;
+        left: -50%;
+        width: 4000px;
+        height: 4000px;
+    }
+    .customh1{ font-size: 9.5em;}
+}
